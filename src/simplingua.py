@@ -36,6 +36,8 @@ def main(wf):
     dictionaries = wf.cached_data('dictionaries', get_dictionaries, max_age=600)
 
     if query:
+        query = re.sub("[\s+\.\!\/_,$%^*(+\"\']+|[+——！，。？、~@#￥%……&*（）]+", "", query)
+        query = query.lower()
         words = query.split(' ')
         if len(words) > 1:
             for entry in dictionaries:
