@@ -2,4 +2,6 @@
 
 方便快捷的Simplingua词典第一版，整合在了强大的Alfred Workflow中。
 
-![下载地址](https://github.com/bydmm/simplingua-workflow/releases "下载地址")
+![demo](https://github.com/bydmm/simplingua-workflow/blob/master/demo.png "Logo")
+
+[下载地址](https://github.com/bydmm/simplingua-workflow/releases)
