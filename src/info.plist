@@ -4,12 +4,31 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.alfredapp.nathan.simplingua</string>
-	<key>category</key>
-	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>63F60794-BB56-4415-9372-BAF974C3A7E1</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6EB8C855-F774-4C8D-ABEE-F34171779001</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6A83B571-FA53-482D-954D-F1C6046719AF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Chengka</string>
@@ -21,6 +40,23 @@
 	<string>Simplingua</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6EB8C855-F774-4C8D-ABEE-F34171779001</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -64,6 +100,27 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>`{query}` 已拷贝到剪切板</string>
+				<key>title</key>
+				<string>Simplingua词典</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>6A83B571-FA53-482D-954D-F1C6046719AF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>This workflow gives you in-line results for Google, helping you find what you want even quicker!</string>
@@ -72,13 +129,27 @@
 		<key>63F60794-BB56-4415-9372-BAF974C3A7E1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>60</integer>
+			<integer>80</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>150</integer>
+		</dict>
+		<key>6A83B571-FA53-482D-954D-F1C6046719AF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>6EB8C855-F774-4C8D-ABEE-F34171779001</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>80</integer>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.3</string>
+	<string>1.4</string>
 	<key>webaddress</key>
 	<string>https://simplingua.github.io/</string>
 </dict>

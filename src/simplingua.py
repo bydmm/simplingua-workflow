@@ -51,7 +51,10 @@ def main(wf):
             translationMatch = translation_match(dictionaries, query)
             allMatch = headMatch + bodyMatch + translationMatch
             for entry in allMatch:
-                wf.add_item(entry['simplingua'], entry['explain'])
+                wf.add_item(title=entry['simplingua'],
+                            subtitle=entry['explain'],
+                            arg=entry['simplingua'],
+                            valid=True)
         wf.send_feedback()
 
 if __name__ == u"__main__":
