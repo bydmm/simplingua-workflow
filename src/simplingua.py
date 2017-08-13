@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 import sys
 import re
+import string
 from workflow import Workflow3, web, ICON_WEB
 
 def get_dictionaries():
@@ -36,7 +37,8 @@ def main(wf):
     dictionaries = wf.cached_data('dictionaries', get_dictionaries, max_age=600)
 
     if query:
-        query = re.sub("[\s+\.\!\/_,$%^*(+\"\']+|[+——！，。？、~@#￥%……&*（）]+", "", query)
+        query = re.sub('[%s]' % re.escape(string.punctuation), '', query)
+        query = re.sub("[+——！，。？、~@#￥%……&*（）]+", "", query)
         query = query.lower()
         words = query.split(' ')
         if len(words) > 1:
@@ -50,7 +52,6 @@ def main(wf):
             allMatch = headMatch + bodyMatch + translationMatch
             for entry in allMatch:
                 wf.add_item(entry['simplingua'], entry['explain'])
-
         wf.send_feedback()
 
 if __name__ == u"__main__":
