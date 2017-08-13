@@ -1,4 +1,4 @@
-# Simplingua Workflow V1.3
+# Simplingua Workflow v1.4
 
 方便快捷的Simplingua词典第一版，整合在了强大的Alfred Workflow中。
 
